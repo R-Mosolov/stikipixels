@@ -3,27 +3,23 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
 } from 'react-router-dom';
-// import HeaderAndSidebar from './components/header-and-sidebar';
-import Products from './pages/products';
-import Warehouses from './pages/warehouses';
+import 'bootstrap';
+
+import MainPage from './pages/main-page';
+import Header from './components/header';
+import Footer from './components/footer';
 
 function App() {
   return (
     <Router>
-      <div>
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
-        <Switch>
-          <Route path="/warehouses">
-            <Warehouses />
-          </Route>
-          <Route path="/">
-            <Products />
-          </Route>
-        </Switch>
-      </div>
+      <Header />
+      <Switch>
+        <Route path="/">
+          <MainPage />
+        </Route>
+      </Switch>
+      <Footer />
     </Router>
   );
 }
