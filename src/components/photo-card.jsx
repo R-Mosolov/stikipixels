@@ -32,7 +32,7 @@ export default function PhotoCard(props) {
   const {
     description,
     imageURL,
-    likes
+    likes,
   } = props;
 
   const classes = useStyles();
@@ -40,21 +40,21 @@ export default function PhotoCard(props) {
   return (
     <Card className={classes.root}>
       <CardHeader
-        avatar={
+        avatar={(
           <Avatar aria-label="recipe" className={classes.avatar}>
             K
           </Avatar>
-        }
-        action={
+        )}
+        action={(
           <IconButton aria-label="settings">
             <MoreVertIcon />
           </IconButton>
-        }
+        )}
         title="KULTURA"
         subheader="September 14, 2016"
       />
       {/* TODO: Move unique data about a photo here */}
-      <Link to={"/photo"}>
+      <Link to="/photo">
         <CardMedia
           className={classes.media}
           image={imageURL}
@@ -64,7 +64,7 @@ export default function PhotoCard(props) {
       </Link>
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
-          {(description) ? description : 'No description'}
+          {(description) || 'No description'}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>

@@ -36,24 +36,24 @@ export default function PhotoPage() {
       <Box mt={5} className="d-flex justify-content-center">
         <Card className={classes.root}>
           <CardHeader
-            avatar={
+            avatar={(
               <Avatar aria-label="recipe" className={classes.avatar}>
                 R
               </Avatar>
-            }
-            action={
+            )}
+            action={(
               <IconButton aria-label="settings">
                 <MoreVertIcon />
               </IconButton>
-            }
+            )}
             title="Shrimp and Chorizo Paella"
             subheader="September 14, 2016"
           />
           <CardMedia
             className={classes.media}
             image={
-              "https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search"
-              + "/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg"
+              'https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search'
+              + '/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg'
             }
             title="Paella dish"
           />

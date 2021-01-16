@@ -6,12 +6,12 @@ import PhotoCard from '../components/photo-card';
 
 // TODO: Move ACCESS_TOKEN to .env module before production
 const ACCESS_TOKEN = 'staCw-UZQJJApKS9QthfvDP6QIXYUmlQnfnkwgkKh8o';
-const URL = 'https://api.unsplash.com/photos/?per_page=12&client_id=' + ACCESS_TOKEN;
+const URL = `https://api.unsplash.com/photos/?per_page=12&client_id=${ACCESS_TOKEN}`;
 
 export default class MainPage extends Component {
   constructor(props) {
     super(props);
-    
+
     this.state = {
       allPhotos: [],
     };
@@ -26,9 +26,9 @@ export default class MainPage extends Component {
           this.setState({ allPhotos: res });
           return console.log(this.state.allPhotos);
         },
-        (err) => console.log(err)
+        (err) => console.log(err),
       )
-      .catch((err) => console.log(err))
+      .catch((err) => console.log(err));
   }
 
   renderPhotos() {
@@ -36,7 +36,7 @@ export default class MainPage extends Component {
       const {
         urls,
         description,
-        likes
+        likes,
       } = photo;
 
       return (
