@@ -40,6 +40,12 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function PhotoCard(props) {
+  const {
+    description,
+    imageURL,
+    likes
+  } = props;
+
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -65,17 +71,20 @@ export default function PhotoCard(props) {
       />
       <CardMedia
         className={classes.media}
-        image={props.imageURL}
+        image={imageURL}
         title="Paella dish"
       />
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          {(description) ? description : 'No description'}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">
           <FavoriteIcon />
+          <Typography variant="body2" color="textSecondary" component="p">
+            {likes}
+          </Typography>
         </IconButton>
         <IconButton aria-label="share">
           <ShareIcon />

@@ -1,5 +1,2 @@
 # The project dependencies
 node_modules
-
-# Environment secret data
-.env
