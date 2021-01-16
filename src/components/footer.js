@@ -10,7 +10,7 @@ export default function Header() {
       <nav className="footer">
         <div className="footer__container container-fluid">
           <Typography className="footer__container_author" variant="body1">
-            <a href="https://github.com/R-Mosolov" target="_blank">Developed by R. Mosolov</a>
+            Developed by R. Mosolov
           </Typography>
         </div>
       </nav>
